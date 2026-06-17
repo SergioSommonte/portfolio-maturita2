@@ -1,92 +1,68 @@
-```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Esame di Stato - Sergio Sommonte</title>
+<title>Portfolio Maturità - Sergio Sommonte</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
-html{
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:#0b1020;
+color:#fff;
 scroll-behavior:smooth;
 }
 
-body{
-font-family:'Segoe UI',sans-serif;
-background:#08111f;
-color:white;
-line-height:1.8;
-}
-
+/* HEADER */
 header{
 position:fixed;
 top:0;
 width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:flex-end;
-gap:30px;
-background:rgba(7,12,25,.9);
-backdrop-filter:blur(10px);
+background:rgba(10,15,30,.95);
+padding:15px 30px;
 z-index:1000;
 }
 
-header a{
-color:white;
+nav{
+display:flex;
+justify-content:flex-end;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:#fff;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
 }
 
-header a:hover{
-color:#60a5fa;
-}
-
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:30px;
+padding:20px;
 
 background:
-linear-gradient(rgba(5,15,40,.75),rgba(5,15,40,.85)),
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
 url("bruxelles.jpg");
 
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 }
 
 .hero h1{
-font-size:5rem;
-margin-bottom:20px;
-text-shadow:0 0 20px rgba(0,0,0,.8);
+font-size:4.5rem;
 }
 
 .hero p{
-font-size:1.3rem;
-max-width:850px;
-margin:auto;
-text-shadow:0 0 10px rgba(0,0,0,.8);
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#2563eb;
-border-radius:10px;
-color:white;
-text-decoration:none;
-font-weight:600;
+font-size:1.2rem;
+margin-top:15px;
+max-width:800px;
 }
 
 section{
@@ -94,180 +70,238 @@ padding:100px 8%;
 }
 
 h2{
-font-size:2.6rem;
 color:#60a5fa;
-margin-bottom:35px;
+margin-bottom:20px;
+font-size:2rem;
 }
 
+/* CARD */
 .card{
 background:#111827;
+padding:20px;
+border-radius:15px;
+margin-top:15px;
 border:1px solid #334155;
-border-radius:20px;
-padding:35px;
-margin-bottom:40px;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
-.card h3{
-margin-bottom:25px;
-color:#93c5fd;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
-p{
-color:#dbeafe;
+.content{
+display:none;
+margin-top:10px;
+color:#cbd5e1;
+}
+
+button{
+background:#3b82f6;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+margin-top:10px;
 }
 
 footer{
 background:#111827;
-padding:35px;
 text-align:center;
-margin-top:60px;
+padding:25px;
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#00aaff;
+color:#ffffff;
+font-size:18px;
+font-weight:700;
+text-decoration:none;
+border-radius:12px;
+border:2px solid white;
+box-shadow:0 0 15px rgba(0,170,255,0.6);
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0088cc;
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(0,170,255,0.9);
 }
 </style>
 
+<script>
+function toggle(id){
+let e=document.getElementById(id);
+e.style.display = e.style.display === "block" ? "none" : "block";
+}
+</script>
+
 </head>
+
 <body>
 
 <header>
-<a href="#">Home</a>
+<nav>
+<a href="#chi">Chi Sono</a>
 <a href="#capolavori">Capolavori</a>
 <a href="#pcto">PCTO</a>
-<a href="#educazione">Educazione Civica</a>
+<a href="#edu">Educazione Civica</a>
+</nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-
 <div>
-
 <h1>Sergio Sommonte</h1>
 
 <p>
-Portfolio digitale realizzato per l'Esame di Stato.
-Un percorso di crescita personale e culturale attraverso i capolavori,
-le esperienze di PCTO e i temi affrontati nel corso di Educazione Civica.
+Portfolio Maturità - Informatica | PCTO, Educazione Civica, crescita personale
 </p>
 
-<a class="btn" href="#capolavori">
-Esplora il Portfolio
-</a>
+<a href="#chi" class="btn">Inizia il percorso</a>
 
 </div>
+</section>
 
+<!-- CHI SONO -->
+<section id="chi">
+<h2>Chi Sono</h2>
+<div class="card">
+Frequento l’indirizzo Informatica. Competenze: database, reti, sicurezza informatica, sviluppo web.
+Collegamento tra teoria scolastica e mondo del lavoro.
+</div>
 </section>
 
 <!-- CAPOLAVORI -->
-
 <section id="capolavori">
-
 <h2>Capolavori</h2>
 
-<div class="card">
+<div class="grid">
 
-<h3>Esperienza al Parlamento Europeo di Bruxelles</h3>
+<div class="card" onclick="toggle('brux')">
+<h3>Parlamento Europeo - Bruxelles</h3>
+<div id="brux" class="content">
+Durante l’anno scolastico ho partecipato a un’esperienza presso il Parlamento Europeo di Bruxelles.
 
-<p>
+Abbiamo visitato il Parlamentarium e la Casa della Storia Europea, approfondendo:
+ nascita dell’Unione Europea,
+ integrazione europea,
+ guerre mondiali e Guerra Fredda e la
+ caduta del Muro di Berlino.
 
-Durante quest'anno scolastico ho avuto l'opportunità di partecipare a un'importante esperienza formativa presso il Parlamento Europeo di Bruxelles insieme all'onorevole Salvatore De Meo.
+Successivamente abbiamo visitato il Parlamento Europeo e la Camera Plenaria, dove gli eurodeputati discutono e votano le leggi.
 
-Abbiamo visitato il Parlamentarium e la Casa della Storia Europea, approfondendo la nascita e l'evoluzione dell'Unione Europea e alcuni eventi fondamentali dell’Europa contemporanea.
-
-La sera abbiamo avuto la possibilità di entrare nel Parlamento Europeo e visitare la Camera Plenaria e alcuni degli ambienti più importanti dell’edificio.
-
-Il giorno successivo abbiamo assistito a una conferenza tra politici e rappresentanti istituzionali e visitato gli spazi dedicati alla comunicazione e alle televisioni interne.
-
-Questa esperienza mi ha permesso di comprendere meglio il valore della cooperazione tra i Paesi europei e il ruolo delle istituzioni europee.
-
-</p>
-
+Questa esperienza mi ha permesso di comprendere il funzionamento delle istituzioni europee e il valore della cooperazione tra Stati.
+</div>
 </div>
 
+<div class="card" onclick="toggle('pro')">
+<h3>PCTO + PROLIGHTS</h3>
+<div id="pro" class="content">
+Il PCTO è stata una delle esperienze più importanti del mio percorso scolastico.
 
-<!-- NUOVO CAPOLAVORO -->
+Ho partecipato a:
+ incontri formativi,
+ visite aziendali e 
+ videoconferenze con studenti universitari e professionisti.
 
-<div class="card">
+Una delle esperienze più significative è stata la visita a PROLIGHTS, azienda di sistemi di illuminazione professionale per eventi, spettacoli, teatri e TV.
 
-<h3>Visita aziendale PROLIGHTS</h3>
+Ho osservato:
+ organizzazione aziendale,
+ reparti tecnici e
+ applicazione della tecnologia nel lavoro reale.
 
-<p>
-
-Durante il mio percorso PCTO ho avuto l’opportunità di visitare l’azienda PROLIGHTS, una realtà specializzata nello sviluppo di tecnologie per l’illuminazione professionale utilizzate nel settore dello spettacolo, dei teatri, degli eventi e delle produzioni televisive sia in Italia che all’estero.
-
-Questa esperienza mi ha permesso di osservare da vicino il funzionamento di un’azienda tecnologica strutturata e di comprendere come le competenze informatiche, elettroniche e ingegneristiche vengano integrate per la realizzazione di prodotti complessi e innovativi.
-
-Durante la visita ci è stato illustrato il processo di progettazione e sviluppo dei sistemi di illuminazione, dalla fase iniziale fino al prodotto finale. Ho potuto osservare l’importanza della collaborazione tra i diversi reparti aziendali, come ricerca e sviluppo, progettazione e test di qualità.
-
-Un aspetto particolarmente interessante è stato vedere come queste tecnologie vengano utilizzate in contesti reali come concerti, eventi internazionali e produzioni televisive.
-
-Questa esperienza mi ha permesso di comprendere meglio il legame tra tecnologia e mondo del lavoro e il ruolo centrale dell’innovazione nei settori moderni.
-
-</p>
-
+Il PCTO mi ha permesso di sviluppare competenze come:
+problem solving, lavoro di squadra, comunicazione e adattamento.
+</div>
 </div>
 
+</div>
 </section>
 
-
+<!-- PCTO -->
 <section id="pcto">
-
 <h2>PCTO</h2>
 
 <div class="card">
+Durante il percorso PCTO ho conosciuto diverse realtà lavorative del territorio.
 
-<h3>Orientamento professionale e universitario</h3>
+Tra queste:
+ Pentasoft (software gestionali e IT),
+ PROLIGHTS (illuminazione professionale),
+ Base Nautica Flavio Gioia (tecnologie nautiche)
 
-<p>
+Ho osservato come i sistemi informatici siano fondamentali per:
+ gestione dei dati,
+ organizzazione aziendale e per la
+ comunicazione tra reparti.
 
-Durante quest'anno scolastico ho partecipato ad un percorso PCTO organizzato dalla scuola che mi ha permesso di conoscere diverse realtà lavorative del territorio.
-
-Tra le esperienze più significative vi sono stati gli incontri con Pentasoft, azienda informatica specializzata nello sviluppo di software gestionali, la visita presso PROLIGHTS e l'incontro presso la Base Nautica Flavio Gioia di Gaeta.
-
-Abbiamo inoltre partecipato ad una videoconferenza con uno studente universitario che ci ha illustrato il proprio percorso formativo e professionale.
-
-Queste esperienze mi hanno fatto comprendere quanto i sistemi informatici, i software gestionali e la gestione dei dati siano fondamentali nel funzionamento delle aziende moderne.
-
-Il percorso mi ha permesso di sviluppare maggiore consapevolezza del mondo del lavoro, comprendendo l'importanza del problem solving, della comunicazione, del lavoro di squadra e della capacità di adattarsi a situazioni differenti.
-
-</p>
-
+Questa esperienza mi ha aiutato a capire meglio il mondo del lavoro e il ruolo dell’informatica nelle aziende moderne.
 </div>
-
 </section>
 
-
-<section id="educazione">
-
+<!-- EDUCAZIONE CIVICA -->
+<section id="edu">
+<!-- EDUCAZIONE CIVICA -->
+<section id="edu">
 <h2>Educazione Civica</h2>
 
+<div class="grid">
+
 <div class="card">
-
-<h3>Cittadinanza attiva e digitale</h3>
-
-<p>
-
-Nel corso di Educazione Civica ho approfondito diversi temi legati alla cittadinanza attiva, alla sostenibilità, alla sicurezza digitale e alla tutela dei diritti.
-
-Ho studiato il diritto di voto, il Goal 16 dell'Agenda 2030, la cittadinanza digitale e il GDPR europeo per la protezione dei dati personali.
-
-Abbiamo inoltre affrontato argomenti riguardanti la sicurezza dei dati, i Big Data, la firma digitale e i pagamenti digitali, comprendendo l'importanza della sicurezza informatica nella società contemporanea.
-
-Particolare attenzione è stata dedicata alla sicurezza sul lavoro, al primo soccorso e al progetto "Il banco vince sempre", che ha permesso di riflettere sui rischi del gioco d'azzardo.
-
-Questa esperienza mi ha permesso di comprendere quanto siano importanti la partecipazione attiva, il rispetto delle regole e l'utilizzo consapevole delle tecnologie digitali.
-
-</p>
-
+<h3>Sistemi e Reti</h3>
+<p>Firma digitale e pagamenti digitali: strumenti che garantiscono sicurezza, autenticità e validità legale dei documenti online.</p>
 </div>
 
+<div class="card">
+<h3>TPS</h3>
+<p>GDPR e privacy: regolamento europeo che protegge i dati personali e definisce come devono essere gestite le informazioni degli utenti.</p>
+</div>
+
+<div class="card">
+<h3>Informatica</h3>
+<p>Big Data e sicurezza: gestione di grandi quantità di dati e protezione contro accessi non autorizzati e attacchi informatici.</p>
+</div>
+
+<div class="card">
+<h3>GPOI</h3>
+<p>Sicurezza sul lavoro: norme e procedure per prevenire incidenti e garantire ambienti lavorativi sicuri.</p>
+</div>
+
+<div class="card">
+<h3>Scienze Motorie</h3>
+<p>Primo soccorso: interventi base per aiutare una persona in caso di emergenza e ridurre i rischi immediati.</p>
+</div>
+
+<div class="card">
+<h3>Esperienze</h3>
+<p>“Il banco vince sempre”: progetto contro il gioco d’azzardo che sensibilizza sui rischi economici e sociali della dipendenza.</p>
+</div>
+
+<!-- 🔵 AGGIUNTI -->
+
+<div class="card">
+<h3>Italiano</h3>
+<p>Cittadinanza attiva: il cittadino partecipa alla vita sociale e politica rispettando le regole e contribuendo al bene comune.</p>
+</div>
+
+<div class="card">
+<h3>Inglese</h3>
+<p>Goal 16 dell’Agenda 2030: promuove pace, giustizia e istituzioni forti per una società più equa e sicura.</p>
+</div>
+
+</div>
 </section>
-
-
 <footer>
-
-Portfolio digitale realizzato da Sergio Sommonte<br>
-Esame di Stato 2025/2026 - Indirizzo Informatica
-
+Portfolio Sergio Sommonte - Esame di Stato 2025/2026
 </footer>
 
 </body>
 </html>
-```
